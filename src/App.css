@@ -1,0 +1,402 @@
+/* body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+} */
+
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+  background-size: cover;
+  background-position: center;
+} */
+/* App.css */
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* Logo section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-logo span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+}
+
+/* .navbar-item {
+  position: relative;
+  margin: 0 15px;
+} */
+.navbar-item {
+  position: relative;
+  margin: 0 15px;
+  z-index: 1; /* Ensure this is lower than the dropdown */
+}
+
+.navbar-item a, .navbar-item span {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.navbar-item:hover .dropdown {
+  display: block;
+}
+
+/* Dropdown menu */
+/* .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 4px;
+} */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  z-index: 10; /* Add a high z-index value */
+}
+
+.dropdown a {
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: #555;
+}
+
+/* Language button */
+.language-btn {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 20px;
+}
+
+.language-btn:hover {
+  background-color: #666;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ddd;
+}
+
+/* Main content and other sections (example styling) */
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.text-content h1, .text-content h2, .text-content p {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+} 
+
+.btn:hover {
+  background-color: #666;
+}
+
+.content {
+  display: flex;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 1200px; /* Increased width for better layout */
+  width: 100%;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px; /* Increased padding for better spacing */
+}
+
+.badge-image {
+  width: 250px; /* Increased width */
+  height: auto;
+  max-height: 300px; /* Set a maximum height to maintain aspect ratio */
+}
+
+.text-content {
+  flex: 2;
+  text-align: left; /* Align text to the left */
+}
+
+.text-content h1 {
+  font-size: 2.8rem;
+  margin: 0;
+  color: #333;
+  font-weight: 700;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 10px 0;
+}
+
+.text-content h2 {
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.text-content .highlight {
+  color: #ff6600;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.volunteer {
+  background-color: #007bff;
+}
+
+.btn.volunteer:hover {
+  background-color: #0056b3;
+}
+
+.btn.member {
+  background-color: #28a745;
+}
+
+.btn.member:hover {
+  background-color: #218838;
+}
+
+.btn.donation {
+  background-color: #dc3545;
+}
+
+.btn.donation:hover {
+  background-color: #c82333;
+}
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-3 {
+  flex: 0 0 23%;
+}
+
+.col-md-3 h4 {
+  margin-bottom: 15px;
+}
+
+.col-md-3 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.col-md-3 ul li {
+  margin-bottom: 10px;
+}
+
+.col-md-3 ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.map {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: #000;
+  font-size: 24px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+ .slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100vw; 
+  height: 90vh; 
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%; 
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%; 
+  background-size: cover;
+  background-position: center;
+}
+
+.dots-container {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.dots-right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dots-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 12px; 
+  height: 12px;
+  margin: 6px; 
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
